@@ -60,14 +60,14 @@ include $(IMAGINE_PATH)/make/package/stdc++.mk
 
 include $(IMAGINE_PATH)/make/imagineStaticLibTarget.mk
 
-install : main
+install : config main
 	@echo "Installing lib & headers to $(prefix)"
 	$(PRINT_CMD)mkdir -p $(prefix)/lib/pkgconfig $(prefix)/include/
 	$(PRINT_CMD)cp lib/$(buildName)/lib$(libName).a $(prefix)/lib/
 	$(PRINT_CMD)cp lib/$(buildName)/$(libName).pc $(prefix)/lib/pkgconfig/
 	$(PRINT_CMD)cp -r $(projectPath)/include/emuframework $(prefix)/include/
 
-install-links : main
+install-links : config main
 	@echo "Installing symlink lib & headers to $(prefix)"
 	$(PRINT_CMD)mkdir -p $(prefix)/lib/pkgconfig $(prefix)/include/
 	$(PRINT_CMD)$(LN) -srf lib/$(buildName)/lib$(libName).a $(prefix)/lib/
