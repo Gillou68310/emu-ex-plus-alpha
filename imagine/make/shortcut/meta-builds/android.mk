@@ -358,7 +358,7 @@ endif
 android_projectDeps := $(android_buildXml) $(android_proguardConfPath)
 
 ifndef android_antTarget
- android_antTarget := release
+ android_antTarget := debug
 endif
 
 android_apkPath := $(android_targetPath)/bin/$(android_metadata_project)-$(android_antTarget).apk
