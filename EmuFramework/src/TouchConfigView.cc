@@ -203,7 +203,7 @@ static const uint touchDpadDiagonalSensitivityMenuVals[] =
 
 static const uint touchCtrlBtnSpaceMenuVals[] =
 {
-	100, 200, 300, 400
+	50, 100, 200, 300, 400
 };
 
 static const uint touchCtrlExtraXBtnSizeMenuVals[] =
@@ -331,7 +331,7 @@ void TouchConfigView::init()
 	}
 	faceBtnHeading.init(); text[i++] = &faceBtnHeading;
 	{
-		static const char *str[] = { "1", "2", "3", "4" };
+		static const char *str[] = { "0.5", "1", "2", "3", "4" };
 		int init = findIdxInArrayOrDefault(touchCtrlBtnSpaceMenuVals, (uint)optionTouchCtrlBtnSpace, 0);
 		btnSpace.init(str, init); text[i++] = &btnSpace;
 	}
